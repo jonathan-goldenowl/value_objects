@@ -1,5 +1,6 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'value_objects/version'
 
@@ -15,7 +16,7 @@ Gem::Specification.new do |s|
   s.files         = Dir['lib/**/*', 'LICENSE.txt', 'README.md']
   s.require_paths = ['lib']
 
-  s.required_ruby_version = '>= 2.2'
+  s.required_ruby_version = '>= 2.3'
 
   s.add_dependency 'activerecord', '>= 4.2', '<= 6.0.0'
 

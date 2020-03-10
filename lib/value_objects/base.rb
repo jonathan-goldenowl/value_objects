@@ -16,11 +16,11 @@ module ValueObjects
     class << self
 
       def load(value)
-        new(value) if value
+        new(value.presence || {}) if value
       end
 
       def dump(value)
-        value.to_hash if value
+        value.to_hash if value.presence
       end
 
       def i18n_scope
